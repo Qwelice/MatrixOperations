@@ -4,9 +4,20 @@ using System.Threading;
 
 namespace MatrixOperations
 {
+    /// <summary>
+    /// Статический класс тестирующий быстродействие операций
+    /// </summary>
     static class OperationTest
     {
         static Random rand = new Random(-245);
+        /// <summary>
+        /// Метод сравнивающий быстродействия последовательного и
+        /// параллельного умножения матриц
+        /// </summary>
+        /// <param name="n1">количество строк первой матрицы</param>
+        /// <param name="m1">количество столбцов первой матрицы</param>
+        /// <param name="n2">количество строк второй матрицы</param>
+        /// <param name="m2">количество столбцов второй матрицы</param>
         public static void MatrixMultiplication(int n1, int m1, int n2, int m2)
         {
             var a = createRandomMatrix(n1, m1);
@@ -39,7 +50,14 @@ namespace MatrixOperations
             t1.Join();
             t2.Join();
         }
-
+        /// <summary>
+        /// Метод сравнивающий быстродействия последовательного и
+        /// параллельного сложения матриц
+        /// </summary>
+        /// <param name="n1">количество строк первой матрицы</param>
+        /// <param name="m1">количество столбцов первой матрицы</param>
+        /// <param name="n2">количество строк второй матрицы</param>
+        /// <param name="m2">количество столбцов второй матрицы</param>
         public static void MatrixAdditionTest(int n1, int m1, int n2, int m2)
         {
             var a = createRandomMatrix(n1, m1);
@@ -72,7 +90,13 @@ namespace MatrixOperations
             t1.Join();
             t2.Join();
         }
-
+        /// <summary>
+        /// Метод сравнивающий быстродействия последовательного и
+        /// параллельного умножения матрицы на скаляр
+        /// </summary>
+        /// <param name="n">количество строк матрицы</param>
+        /// <param name="m">количество столбцов матрицы</param>
+        /// <param name="scalar">скаляр</param>
         public static void MatrixScalarMultiplicationTest(int n, int m, double scalar)
         {
             var matrix = createRandomMatrix(n, m);
