@@ -29,7 +29,7 @@ namespace MatrixOperations
                 var st = new Stopwatch();
                 st.Reset();
                 st.Start();
-                Operation.times(a, b);
+                Operation.Times(a, b);
                 st.Stop();
                 Console.WriteLine($"\nSequentional Matrix Multiplication calculation\n" +
                     $"Timestamp: {st.ElapsedMilliseconds} ms.\n");
@@ -39,7 +39,7 @@ namespace MatrixOperations
                 var st = new Stopwatch();
                 st.Reset();
                 st.Start();
-                ParallelOperation.times(c, d);
+                ParallelOperation.Times(c, d);
                 st.Stop();
                 Console.WriteLine($"\nParallel Matrix Multiplication calculation\n" +
                     $"Timestamp: {st.ElapsedMilliseconds} ms.\n");
@@ -69,7 +69,7 @@ namespace MatrixOperations
                 var st = new Stopwatch();
                 st.Reset();
                 st.Start();
-                Operation.plus(a, b);
+                Operation.Plus(a, b);
                 st.Stop();
                 Console.WriteLine($"\nSequentional Matrix Addition calculation\n" +
                     $"Timestamp: {st.ElapsedMilliseconds} ms.\n");
@@ -79,7 +79,7 @@ namespace MatrixOperations
                 var st = new Stopwatch();
                 st.Reset();
                 st.Start();
-                ParallelOperation.plus(c, d);
+                ParallelOperation.Plus(c, d);
                 st.Stop();
                 Console.WriteLine($"\nParallel Matrix Addition calculation\n" +
                     $"Timestamp: {st.ElapsedMilliseconds} ms.\n");
@@ -104,7 +104,7 @@ namespace MatrixOperations
                 var st = new Stopwatch();
                 st.Reset();
                 st.Start();
-                Operation.times(matrix, scalar);
+                Operation.Times(matrix, scalar);
                 st.Stop();
                 Console.WriteLine($"\nSequentional Matrix-Scalar Multiplication calculation\n" +
                     $"Timestamp: {st.ElapsedMilliseconds} ms.\n");
@@ -114,7 +114,7 @@ namespace MatrixOperations
                 var st = new Stopwatch();
                 st.Reset();
                 st.Start();
-                ParallelOperation.times(matrix, scalar);
+                ParallelOperation.Times(matrix, scalar);
                 st.Stop();
                 Console.WriteLine($"\nParallel Matrix-Scalar Multiplication calculation\n" +
                     $"Timestamp: {st.ElapsedMilliseconds} ms.\n");

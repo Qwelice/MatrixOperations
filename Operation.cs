@@ -13,7 +13,7 @@ namespace MatrixOperations
         /// <param name="a">первая матрица</param>
         /// <param name="b">вторая матрица</param>
         /// <returns>результат умножения двух матриц</returns>
-        public static double[,] times(double[,] a, double[,] b)
+        public static double[,] Times(double[,] a, double[,] b)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace MatrixOperations
         /// <param name="matrix">матрица</param>
         /// <param name="csta">скаляр</param>
         /// <returns>результат умножения матрицы на скаляр</returns>
-        public static double[,] times(double[,] matrix, double csta)
+        public static double[,] Times(double[,] matrix, double csta)
         {
             var result = new double[matrix.GetLength(0),matrix.GetLength(1)];
             for(int i = 0; i < result.GetLength(0); i++)
@@ -63,7 +63,7 @@ namespace MatrixOperations
         /// <param name="matrix">матрица</param>
         /// <param name="csta">скаляр</param>
         /// <returns>результат умножения скаляра на матрицу</returns>
-        public static double[,] times(double csta, double[,] matrix)
+        public static double[,] Times(double csta, double[,] matrix)
         {
             var result = new double[matrix.GetLength(0), matrix.GetLength(1)];
             for (int i = 0; i < result.GetLength(0); i++)
@@ -81,7 +81,7 @@ namespace MatrixOperations
         /// <param name="a">первая матрица</param>
         /// <param name="b">вторая матрица</param>
         /// <returns>результат сложения двух матриц</returns>
-        public static double[,] plus(double[,] a, double[,] b)
+        public static double[,] Plus(double[,] a, double[,] b)
         {
             if(a.GetLength(0) == b.GetLength(0) && a.GetLength(1) == b.GetLength(1))
             {
